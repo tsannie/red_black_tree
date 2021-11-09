@@ -6,7 +6,7 @@
 /*   By: tsannie <tsannie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:14:37 by tsannie           #+#    #+#             */
-/*   Updated: 2021/11/09 13:37:22 by tsannie          ###   ########.fr       */
+/*   Updated: 2021/11/09 16:36:25 by tsannie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	main(void)
 {
-	ft::RBTree<int, char>		test;
+	ft::RBTree<int, std::string>	test;
+	int i;
 
 	srand (time(NULL));
-	for (int i = 0 ; i < 50 ; i++)
-		test.insertNode(rand() % 100, 'z');
+	for (i = 0 ; i < 50 ; i++)
+		test.insertNode(rand() % 100, "heyo");
 	test.printTree();
-	for (int i = 0 ; i < 50 ; i++)
+	for (i = 0 ; i < 50 ; i++)
 		test.deleteNode(i);
-
 }

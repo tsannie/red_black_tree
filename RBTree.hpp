@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-#define	BLACK	0
-#define	RED		1
+#define	BLACK	false
+#define	RED		true
 
 
 namespace ft
@@ -33,7 +33,7 @@ private:
 		struct s_node*	parent;
 		struct s_node*	left;
 		struct s_node*	right;
-		int				color;
+		bool			color;
 		Key				key;
 		Value			value;
 	}				node;
@@ -51,7 +51,6 @@ public:
 		this->_nil_node->right = NULL;
 		this->_nil_node->color = BLACK;
 		this->_nil_node->key = 0;
-		this->_nil_node->value = 0;
 
 		this->_root = this->_nil_node;
 	}
